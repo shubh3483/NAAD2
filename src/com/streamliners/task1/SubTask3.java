@@ -7,9 +7,18 @@ public class SubTask3 {
     }
 
     private static boolean isDirectlyProportional(int[] x, int[] y) {
-        //Write your code here!
 
-        return false;
+        //Calculating the proportionality constant
+        float propConstant;
+        propConstant = y[0]/x[0];
+
+        //Checking whether the numbers in the array are directly proportional or not.
+        for(int i=1;i<x.length;i++)
+        {
+            if(y[i]/x[i] != propConstant)
+                return false;
+        }
+        return true;
     }
 
 }
